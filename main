@@ -1773,3 +1773,22 @@ ImGui.FullScreenGui = ImGui:CreateInstance("ScreenGui", GuiParent, {
 })
 
 return ImGui
+
+local imageLabel = Instance.new("ImageLabel")
+imageLabel.Name = "ExampleImageLabel"
+imageLabel.Parent = game.CoreGui.ScreenGui.Window_.Content.Body
+
+-- Set the properties of the ImageLabel
+imageLabel.Size = UDim2.new(350, 300) -- Size of the ImageLabel (100x100 pixels)
+imageLabel.Position = UDim2.new(0.5, 0, 0, 70) -- Center the ImageLabel on the screen
+imageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+imageLabel.Image = "rbxassetid://10046678324" -- Replace with your image asset ID
+imageLabel.ZIndex = 10
+imageLabel.ImageColor3 = Color3.fromRGB(162, 162, 162)
+imageLabel.ResampleMode = "Pixelated"
+imageLabel.BackgroundColor3 = Color3.fromRGB(20, 24, 25)
+imageLabel.ScaleType = "Slice"
+imageLabel.SliceCenter = Rect.new(18, 18, 36, 35)
+
+-- Optional: Set other properties like background transparency
+imageLabel.BackgroundTransparency = 1
